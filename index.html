@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Veritas.ai - AI You Can Trust</title>
+    <title>OnedeskAI - OS for Intelligent Work</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         html { scroll-behavior: smooth; }
@@ -12,27 +12,53 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
+
+        /* Subtle AI-style background animations */
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-18px); }
+            100% { transform: translateY(0px); }
+        }
+
+        @keyframes pulse-glow {
+            0% { opacity: 0.25; transform: scale(1); }
+            50% { opacity: 0.7; transform: scale(1.08); }
+            100% { opacity: 0.25; transform: scale(1); }
+        }
+
+        .animate-float-slow {
+            animation: float 14s ease-in-out infinite;
+        }
+
+        .animate-pulse-slow {
+            animation: pulse-glow 18s ease-in-out infinite;
+        }
+
+        .animate-float-delay {
+            animation: float 18s ease-in-out infinite;
+            animation-delay: 4s;
+        }
     </style>
 </head>
 <body class="bg-gray-50">
-    
+
     <!-- Navigation -->
     <nav class="fixed w-full z-50 bg-white/95 backdrop-blur-md shadow-lg">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
                 <a href="#" class="flex items-center space-x-2">
                     <div class="bg-gradient-to-br from-blue-600 to-indigo-600 p-2 rounded-lg">
-                        <span class="text-white font-bold text-xl">V</span>
+                        <span class="text-white font-bold text-xl">O</span>
                     </div>
                     <div>
-                        <span class="text-2xl font-bold text-gradient">Veritas.ai</span>
-                        <p class="text-xs text-gray-600">AI You Can Trust</p>
+                        <span class="text-2xl font-bold text-gradient">OnedeskAI</span>
+                        <p class="text-xs text-gray-600">OS for Intelligent Work</p>
                     </div>
                 </a>
                 <div class="hidden md:flex items-center space-x-8">
+                    <a href="#os" class="text-gray-700 hover:text-blue-600 font-medium">Onedesk OS</a>
                     <a href="#services" class="text-gray-700 hover:text-blue-600 font-medium">Services</a>
                     <a href="#solutions" class="text-gray-700 hover:text-blue-600 font-medium">Solutions</a>
-                    <a href="#team" class="text-gray-700 hover:text-blue-600 font-medium">Team</a>
                     <a href="#contact" class="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-6 py-2.5 rounded-lg hover:shadow-lg transition-all">Get Started</a>
                 </div>
             </div>
@@ -40,24 +66,229 @@
     </nav>
 
     <!-- Hero -->
-    <section class="pt-32 pb-20 px-4 bg-gradient-to-br from-blue-50 via-white to-indigo-50">
-        <div class="max-w-7xl mx-auto text-center">
+    <section class="relative pt-32 pb-20 px-4 bg-gradient-to-br from-blue-50 via-white to-indigo-50 overflow-hidden">
+        <!-- Hero animated blobs -->
+        <div class="pointer-events-none absolute inset-0 overflow-hidden">
+            <div class="absolute -top-32 -right-10 w-80 h-80 bg-gradient-to-br from-cyan-400/20 via-blue-500/10 to-indigo-500/30 blur-3xl rounded-full animate-pulse-slow"></div>
+            <div class="absolute bottom-[-6rem] -left-16 w-72 h-72 bg-gradient-to-br from-violet-500/15 via-fuchsia-500/10 to-indigo-500/25 blur-3xl rounded-full animate-float-slow"></div>
+            <div class="absolute inset-x-0 top-1/2 h-px bg-gradient-to-r from-transparent via-blue-500/30 to-transparent opacity-70"></div>
+        </div>
+
+        <div class="relative max-w-7xl mx-auto text-center">
             <h1 class="text-5xl lg:text-6xl font-bold mb-6">
-                <span class="text-gray-900">Transform Documents into </span>
-                <span class="text-gradient">Actionable Intelligence</span>
+                <span class="text-gray-900">One OS for </span>
+                <span class="text-gradient">Every Desk in Your Company</span>
             </h1>
             <p class="text-xl text-gray-600 mb-8 max-w-3xl mx-auto">
-                Veritas.ai builds trustworthy AI solutions that bring transparency, explainability, 
-                and compliance to document processing in healthcare, finance, legal, and government.
+                OnedeskAI is your intelligent work OS: a single place where HR, finance, operations,
+                support and leadership teams run on AI-powered apps, dashboards and copilots.
             </p>
             <div class="flex justify-center gap-4 mb-12">
-                <a href="#contact" class="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-4 rounded-lg font-semibold hover:shadow-xl transition-all">Get Started</a>
-                <a href="#solutions" class="bg-white text-gray-800 px-8 py-4 rounded-lg font-semibold border-2 border-gray-200 hover:border-blue-600 transition-all">Explore Solutions</a>
+                <a href="#contact" class="bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-4 rounded-lg font-semibold hover:shadow-xl transition-all">
+                    Book a Demo
+                </a>
+                <a href="#os" class="bg-white text-gray-800 px-8 py-4 rounded-lg font-semibold border-2 border-gray-200 hover:border-blue-600 transition-all">
+                    Explore Onedesk OS
+                </a>
             </div>
             <div class="grid grid-cols-3 gap-8 max-w-3xl mx-auto pt-8 border-t">
-                <div><p class="text-3xl font-bold text-blue-600">$187B</p><p class="text-sm text-gray-600">Healthcare AI by 2030</p></div>
-                <div><p class="text-3xl font-bold text-indigo-600">$20B+</p><p class="text-sm text-gray-600">IDP Market by 2030</p></div>
-                <div><p class="text-3xl font-bold text-purple-600">30%+</p><p class="text-sm text-gray-600">CAGR Growth</p></div>
+                <div>
+                    <p class="text-3xl font-bold text-blue-600">$187B</p>
+                    <p class="text-sm text-gray-600">AI for enterprise workflows</p>
+                </div>
+                <div>
+                    <p class="text-3xl font-bold text-indigo-600">50+ apps</p>
+                    <p class="text-sm text-gray-600">From HR to finance</p>
+                </div>
+                <div>
+                    <p class="text-3xl font-bold text-purple-600">30%+</p>
+                    <p class="text-sm text-gray-600">Productivity lift</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Onedesk OS Page / Section -->
+    <section id="os" class="relative py-20 px-4 bg-gradient-to-br from-slate-900 via-slate-950 to-indigo-900 text-white overflow-hidden">
+        <!-- Animated AI background for OS section -->
+        <div class="pointer-events-none absolute inset-0 overflow-hidden">
+            <div class="absolute -top-32 -left-10 w-80 h-80 bg-gradient-to-br from-cyan-400/25 via-blue-500/15 to-indigo-500/30 blur-3xl rounded-full animate-pulse-slow"></div>
+            <div class="absolute bottom-[-7rem] right-[-3rem] w-96 h-96 bg-gradient-to-tr from-emerald-400/20 via-teal-500/10 to-blue-500/25 blur-3xl rounded-full animate-float-delay"></div>
+            <div class="absolute inset-x-10 top-10 h-px bg-gradient-to-r from-transparent via-cyan-400/40 to-transparent opacity-80"></div>
+            <div class="absolute inset-x-0 bottom-16 h-px bg-gradient-to-r from-transparent via-indigo-400/40 to-transparent opacity-60"></div>
+        </div>
+
+        <div class="relative max-w-7xl mx-auto">
+            <div class="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-10 mb-14">
+                <div class="max-w-xl">
+                    <p class="uppercase tracking-[0.25em] text-xs text-blue-300 mb-3">
+                        THE OPERATING SYSTEM
+                    </p>
+                    <h2 class="text-4xl lg:text-5xl font-bold mb-4">
+                        Onedesk OS
+                        <span class="block text-lg lg:text-2xl text-blue-300 mt-1">
+                            All the Apps Your Company Needs, in One Place
+                        </span>
+                    </h2>
+                    <p class="text-slate-100 text-lg mb-4">
+                        Onedesk OS is the brain and nervous system of your organization.
+                        It sits on top of your existing tools and data, and turns them into
+                        a curated workspace of AI-native apps for every team.
+                    </p>
+                    <p class="text-slate-100 text-base mb-6">
+                        Out of the box, you get ready-made workspaces for HR, Finance, Sales,
+                        Support, Operations, Leadership and more — all powered by AI agents,
+                        dashboards and copilots that understand your business context.
+                    </p>
+                    <div class="flex flex-wrap gap-3 mb-6">
+                        <span class="px-4 py-2 rounded-full bg-white/10 border border-white/10 text-sm">
+                            HR &amp; People apps
+                        </span>
+                        <span class="px-4 py-2 rounded-full bg-white/10 border border-white/10 text-sm">
+                            Finance &amp; Revenue apps
+                        </span>
+                        <span class="px-4 py-2 rounded-full bg-white/10 border border-white/10 text-sm">
+                            Dashboards &amp; analytics
+                        </span>
+                        <span class="px-4 py-2 rounded-full bg-white/10 border border-white/10 text-sm">
+                            Task &amp; project automation
+                        </span>
+                    </div>
+                    <p class="text-sm text-slate-300">
+                        Need something unique? Onedesk OS lets you spin up fully custom apps
+                        tailored to your processes &mdash; from approval flows and KPI command
+                        centers to domain-specific copilots for your frontline teams.
+                    </p>
+                </div>
+
+                <div class="flex-1 w-full">
+                    <div class="bg-white/5 border border-white/10 rounded-3xl p-6 lg:p-8 shadow-2xl backdrop-blur">
+                        <p class="text-sm font-semibold text-blue-200 mb-4">
+                            How Onedesk OS orchestrates your work
+                        </p>
+                        <div class="space-y-4">
+                            <div class="flex items-start gap-3">
+                                <div class="mt-1 w-8 h-8 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-400 flex items-center justify-center text-sm font-bold">
+                                    1
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-white mb-1">Connect &amp; Centralize</h3>
+                                    <p class="text-sm text-slate-200">
+                                        Securely plug in your HR system, CRM, ticketing tools, data warehouse,
+                                        spreadsheets and internal APIs. Onedesk OS becomes the single pane of glass
+                                        on top of everything.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <div class="mt-1 w-8 h-8 rounded-xl bg-gradient-to-br from-indigo-500 to-purple-400 flex items-center justify-center text-sm font-bold">
+                                    2
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-white mb-1">Compose Workspaces &amp; Apps</h3>
+                                    <p class="text-sm text-slate-200">
+                                        Use pre-built workspace templates for HR, finance, support, ops and leadership,
+                                        or ask us to design custom apps and dashboards for your team&apos;s exact workflow.
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="flex items-start gap-3">
+                                <div class="mt-1 w-8 h-8 rounded-xl bg-gradient-to-br from-emerald-500 to-teal-400 flex items-center justify-center text-sm font-bold">
+                                    3
+                                </div>
+                                <div>
+                                    <h3 class="font-semibold text-white mb-1">Automate &amp; Assist</h3>
+                                    <p class="text-sm text-slate-200">
+                                        Let AI agents assign tasks, draft updates, watch KPIs, triage tickets,
+                                        and answer questions, while human owners stay in control with approvals
+                                        and explainable insights.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Stack diagram style band -->
+                        <div class="mt-6 rounded-2xl border border-white/10 bg-slate-900/70 p-5">
+                            <p class="text-xs uppercase tracking-[0.25em] text-slate-300 mb-3">
+                                ARCHITECTURE AT A GLANCE
+                            </p>
+                            <div class="space-y-3 text-xs sm:text-sm">
+                                <div class="flex items-center gap-2">
+                                    <span class="w-32 text-slate-300">Team Layer</span>
+                                    <div class="flex-1 px-3 py-2 rounded-xl bg-gradient-to-r from-blue-500/40 to-indigo-500/40">
+                                        HR, Finance, Sales, Ops, Support &amp; Leadership apps and dashboards
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <span class="w-32 text-slate-300">Onedesk OS</span>
+                                    <div class="flex-1 px-3 py-2 rounded-xl bg-gradient-to-r from-slate-800 to-slate-900 border border-white/10">
+                                        Orchestration • Agents • RAG • Workflow engine • Guardrails • Policies
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-2">
+                                    <span class="w-32 text-slate-300">Foundation</span>
+                                    <div class="flex-1 px-3 py-2 rounded-xl bg-gradient-to-r from-emerald-500/30 to-teal-500/30">
+                                        HRIS • CRM • Ticketing • Data lakes • BI tools • Line-of-business apps
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- OS feature grid: Applications & Customization -->
+            <div class="grid lg:grid-cols-3 gap-6 mb-10">
+                <div class="bg-white/5 border border-white/10 rounded-2xl p-6">
+                    <h4 class="font-semibold mb-2 text-white">All-in-One Application Suite</h4>
+                    <p class="text-sm text-slate-200 mb-4">
+                        Replace a patchwork of tools with a single, integrated OS that covers
+                        everything from hiring to invoicing.
+                    </p>
+                    <ul class="space-y-2 text-sm text-slate-200">
+                        <li>• Hiring, onboarding &amp; performance reviews</li>
+                        <li>• Expense management &amp; approvals</li>
+                        <li>• Sales &amp; renewal pipelines</li>
+                        <li>• Support queues &amp; SLAs</li>
+                    </ul>
+                </div>
+                <div class="bg-white/5 border border-white/10 rounded-2xl p-6">
+                    <h4 class="font-semibold mb-2 text-white">Dashboards &amp; Task Automation</h4>
+                    <p class="text-sm text-slate-200 mb-4">
+                        Every app in Onedesk OS comes with AI-native dashboards and automations
+                        that keep your teams a step ahead.
+                    </p>
+                    <ul class="space-y-2 text-sm text-slate-200">
+                        <li>• Real-time KPI command centers</li>
+                        <li>• AI-based task assignment &amp; routing</li>
+                        <li>• Health checks &amp; early-warning alerts</li>
+                        <li>• Inbox-to-action automations</li>
+                    </ul>
+                </div>
+                <div class="bg-white/5 border border-white/10 rounded-2xl p-6">
+                    <h4 class="font-semibold mb-2 text-white">Custom Apps on Demand</h4>
+                    <p class="text-sm text-slate-200 mb-4">
+                        Bring your own process, we&apos;ll turn it into an app. Onedesk OS is designed
+                        for rapid, client-specific customization.
+                    </p>
+                    <ul class="space-y-2 text-sm text-slate-200">
+                        <li>• Domain-specific copilots</li>
+                        <li>• Bespoke workflows &amp; approvals</li>
+                        <li>• Custom integrations &amp; tools</li>
+                        <li>• Co-design sessions with your team</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="bg-gradient-to-r from-blue-500/20 to-indigo-500/20 border border-white/15 rounded-2xl p-6 flex flex-col md:flex-row items-center justify-between gap-4">
+                <p class="text-sm text-slate-100 max-w-2xl">
+                    Onedesk OS can live in your cloud, our cloud, or fully on-prem. Keep sensitive data
+                    where it already is, while giving every team a modern, AI-native experience on top.
+                </p>
+                <a href="#contact" class="inline-flex items-center px-5 py-3 rounded-xl bg-white text-slate-900 text-sm font-semibold hover:bg-slate-100 transition-all">
+                    Talk to us about Onedesk OS
+                    <span class="ml-2 text-blue-600">↗</span>
+                </a>
             </div>
         </div>
     </section>
@@ -67,75 +298,93 @@
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-16">
                 <h2 class="text-4xl lg:text-5xl font-bold mb-4">
-                    Comprehensive AI Solutions for <span class="text-gradient">Every Need</span>
+                    Comprehensive AI Services for <span class="text-gradient">Every Team</span>
                 </h2>
-                <p class="text-xl text-gray-600">From generative AI to machine learning, we deliver cutting-edge solutions</p>
+                <p class="text-xl text-gray-600">From generative AI to custom workflow automation, we build around your company</p>
             </div>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                
+
                 <div class="bg-white rounded-2xl p-8 border-2 border-gray-100 hover:shadow-2xl transition-all">
                     <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-xl mb-6"></div>
                     <h3 class="text-2xl font-bold mb-4">Generative AI Solutions</h3>
-                    <p class="text-gray-600 mb-4">Leverage cutting-edge GenAI to automate content generation, document summarization, and intelligent data synthesis.</p>
+                    <p class="text-gray-600 mb-4">
+                        Automate content, emails, updates, documentation and knowledge retrieval
+                        with GenAI copilots tuned to your data and tone.
+                    </p>
                     <ul class="space-y-2 text-sm text-gray-700">
-                        <li>✓ Custom LLM Integration</li>
-                        <li>✓ Content Generation</li>
-                        <li>✓ Automated Summarization</li>
+                        <li>✓ Custom LLM integration</li>
+                        <li>✓ Knowledge copilots</li>
+                        <li>✓ Content &amp; communication assistants</li>
                     </ul>
                 </div>
 
                 <div class="bg-white rounded-2xl p-8 border-2 border-gray-100 hover:shadow-2xl transition-all">
                     <div class="w-16 h-16 bg-gradient-to-br from-indigo-500 to-purple-500 rounded-xl mb-6"></div>
                     <h3 class="text-2xl font-bold mb-4">Agentic AI Systems</h3>
-                    <p class="text-gray-600 mb-4">Deploy autonomous AI agents that make intelligent decisions and orchestrate complex workflows in real-time.</p>
+                    <p class="text-gray-600 mb-4">
+                        Deploy autonomous AI agents that watch your metrics, automate workflows
+                        and notify humans when it&apos;s time to act.
+                    </p>
                     <ul class="space-y-2 text-sm text-gray-700">
-                        <li>✓ Autonomous Decision Making</li>
-                        <li>✓ Multi-Agent Orchestration</li>
-                        <li>✓ Adaptive Learning</li>
+                        <li>✓ Multi-agent orchestration</li>
+                        <li>✓ Approval-aware automations</li>
+                        <li>✓ Continuous learning from feedback</li>
                     </ul>
                 </div>
 
                 <div class="bg-white rounded-2xl p-8 border-2 border-gray-100 hover:shadow-2xl transition-all">
                     <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-xl mb-6"></div>
                     <h3 class="text-2xl font-bold mb-4">Machine Learning Solutions</h3>
-                    <p class="text-gray-600 mb-4">Build custom ML models for prediction, classification, and pattern recognition tailored to your industry.</p>
+                    <p class="text-gray-600 mb-4">
+                        Build predictive models for churn, revenue, risk, and operations,
+                        all integrated directly into Onedesk OS apps.
+                    </p>
                     <ul class="space-y-2 text-sm text-gray-700">
-                        <li>✓ Predictive Analytics</li>
-                        <li>✓ Classification Models</li>
-                        <li>✓ Pattern Recognition</li>
+                        <li>✓ Predictive analytics</li>
+                        <li>✓ Scoring &amp; prioritization</li>
+                        <li>✓ Pattern &amp; anomaly detection</li>
                     </ul>
                 </div>
 
                 <div class="bg-white rounded-2xl p-8 border-2 border-gray-100 hover:shadow-2xl transition-all">
                     <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-emerald-500 rounded-xl mb-6"></div>
                     <h3 class="text-2xl font-bold mb-4">Intelligent Document Processing</h3>
-                    <p class="text-gray-600 mb-4">Transform unstructured documents into structured, actionable data with AI-powered extraction.</p>
+                    <p class="text-gray-600 mb-4">
+                        Turn contracts, invoices, tickets, and PDFs into structured data that
+                        flows into your apps and dashboards.
+                    </p>
                     <ul class="space-y-2 text-sm text-gray-700">
-                        <li>✓ Data Extraction</li>
-                        <li>✓ Auto-Classification</li>
-                        <li>✓ Multi-Format Support</li>
+                        <li>✓ Smart extraction &amp; validation</li>
+                        <li>✓ Auto-classification &amp; routing</li>
+                        <li>✓ Multi-format document support</li>
                     </ul>
                 </div>
 
                 <div class="bg-white rounded-2xl p-8 border-2 border-gray-100 hover:shadow-2xl transition-all">
                     <div class="w-16 h-16 bg-gradient-to-br from-orange-500 to-red-500 rounded-xl mb-6"></div>
-                    <h3 class="text-2xl font-bold mb-4">Explainable AI</h3>
-                    <p class="text-gray-600 mb-4">Ensure transparency and trust with AI models that provide clear explanations for their decisions.</p>
+                    <h3 class="text-2xl font-bold mb-4">Explainable &amp; Safe AI</h3>
+                    <p class="text-gray-600 mb-4">
+                        Build AI experiences that people trust, backed by strong governance,
+                        auditability and human-in-the-loop controls.
+                    </p>
                     <ul class="space-y-2 text-sm text-gray-700">
-                        <li>✓ Decision Transparency</li>
-                        <li>✓ Audit Trails</li>
-                        <li>✓ Compliance Ready</li>
+                        <li>✓ Decision transparency</li>
+                        <li>✓ Guardrails &amp; policies</li>
+                        <li>✓ Compliance-ready designs</li>
                     </ul>
                 </div>
 
                 <div class="bg-white rounded-2xl p-8 border-2 border-gray-100 hover:shadow-2xl transition-all">
                     <div class="w-16 h-16 bg-gradient-to-br from-teal-500 to-cyan-500 rounded-xl mb-6"></div>
-                    <h3 class="text-2xl font-bold mb-4">AI Integration & APIs</h3>
-                    <p class="text-gray-600 mb-4">Seamlessly integrate AI capabilities into your existing systems with robust APIs.</p>
+                    <h3 class="text-2xl font-bold mb-4">Integrations &amp; APIs</h3>
+                    <p class="text-gray-600 mb-4">
+                        Plug Onedesk AI into your stack &mdash; HRIS, CRM, ticketing, BI tools,
+                        data warehouses and more.
+                    </p>
                     <ul class="space-y-2 text-sm text-gray-700">
-                        <li>✓ RESTful APIs</li>
-                        <li>✓ Enterprise Integration</li>
-                        <li>✓ Scalable Infrastructure</li>
+                        <li>✓ RESTful &amp; event-driven APIs</li>
+                        <li>✓ Enterprise authentication</li>
+                        <li>✓ Secure, scalable infrastructure</li>
                     </ul>
                 </div>
 
@@ -148,125 +397,115 @@
         <div class="max-w-7xl mx-auto">
             <div class="text-center mb-16">
                 <h2 class="text-4xl lg:text-5xl font-bold mb-4">
-                    Tailored Solutions for <span class="text-gradient">High-Stakes Industries</span>
+                    Built for <span class="text-gradient">Cross-Functional Teams</span>
                 </h2>
-                <p class="text-xl text-gray-600">From healthcare to government, we deliver trusted AI solutions</p>
+                <p class="text-xl text-gray-600">
+                    HR, Finance, Ops, Support and Leadership finally share the same source of truth
+                </p>
             </div>
             <div class="grid md:grid-cols-2 gap-8">
-                
+
                 <div class="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-3xl p-8 border-2 border-gray-100">
-                    <h3 class="text-2xl font-bold mb-2">Healthcare</h3>
-                    <p class="text-sm text-gray-600 mb-4">Revenue Cycle Management & Patient Care</p>
-                    <p class="text-gray-700 mb-6">Accelerate reimbursements, reduce claim denials, and improve patient outcomes with AI-powered document processing.</p>
+                    <h3 class="text-2xl font-bold mb-2">People &amp; HR</h3>
+                    <p class="text-sm text-gray-600 mb-4">Hiring, onboarding, performance &amp; culture</p>
+                    <p class="text-gray-700 mb-6">
+                        Give your HR team a cockpit for the entire employee journey: recruitment funnels,
+                        offer tracking, onboarding checklists, performance snapshots and pulse surveys,
+                        all with AI support.
+                    </p>
                     <div class="flex gap-4">
-                        <div class="text-center"><p class="text-2xl font-bold text-blue-600">$150B+</p><p class="text-sm text-gray-600">RCM Market</p></div>
-                        <div class="text-center"><p class="text-2xl font-bold text-blue-600">50%</p><p class="text-sm text-gray-600">Faster Processing</p></div>
+                        <div class="text-center">
+                            <p class="text-2xl font-bold text-blue-600">2x</p>
+                            <p class="text-sm text-gray-600">Faster hiring decisions</p>
+                        </div>
+                        <div class="text-center">
+                            <p class="text-2xl font-bold text-blue-600">40%</p>
+                            <p class="text-sm text-gray-600">Less admin time</p>
+                        </div>
                     </div>
                 </div>
 
                 <div class="bg-gradient-to-br from-green-50 to-emerald-50 rounded-3xl p-8 border-2 border-gray-100">
-                    <h3 class="text-2xl font-bold mb-2">Finance</h3>
-                    <p class="text-sm text-gray-600 mb-4">Risk Management & Compliance</p>
-                    <p class="text-gray-700 mb-6">Enhance accuracy, reduce compliance risks, and accelerate decision-making with intelligent document analysis.</p>
+                    <h3 class="text-2xl font-bold mb-2">Finance &amp; Revenue</h3>
+                    <p class="text-sm text-gray-600 mb-4">Cash, cost &amp; profitability in one view</p>
+                    <p class="text-gray-700 mb-6">
+                        Close books faster, watch runway, and understand profitability by customer,
+                        product or project with AI-assisted anomaly detection and commentary.
+                    </p>
                     <div class="flex gap-4">
-                        <div class="text-center"><p class="text-2xl font-bold text-green-600">99.5%</p><p class="text-sm text-gray-600">Accuracy Rate</p></div>
-                        <div class="text-center"><p class="text-2xl font-bold text-green-600">70%</p><p class="text-sm text-gray-600">Time Saved</p></div>
+                        <div class="text-center">
+                            <p class="text-2xl font-bold text-green-600">70%</p>
+                            <p class="text-sm text-gray-600">Time saved on reporting</p>
+                        </div>
+                        <div class="text-center">
+                            <p class="text-2xl font-bold text-green-600">99.5%</p>
+                            <p class="text-sm text-gray-600">Data accuracy</p>
+                        </div>
                     </div>
                 </div>
 
                 <div class="bg-gradient-to-br from-purple-50 to-pink-50 rounded-3xl p-8 border-2 border-gray-100">
-                    <h3 class="text-2xl font-bold mb-2">Legal</h3>
-                    <p class="text-sm text-gray-600 mb-4">Contract Analysis & Discovery</p>
-                    <p class="text-gray-700 mb-6">Streamline contract review, e-discovery, and legal research with AI that understands legal nuances.</p>
+                    <h3 class="text-2xl font-bold mb-2">Support &amp; Operations</h3>
+                    <p class="text-sm text-gray-600 mb-4">Tickets, SLAs &amp; escalations</p>
+                    <p class="text-gray-700 mb-6">
+                        Let agents and ops leaders see the full picture: live ticket queues, recurring
+                        issues, SLA risk, and AI-generated root-cause insights and action lists.
+                    </p>
                     <div class="flex gap-4">
-                        <div class="text-center"><p class="text-2xl font-bold text-purple-600">80%</p><p class="text-sm text-gray-600">Review Time Saved</p></div>
-                        <div class="text-center"><p class="text-2xl font-bold text-purple-600">95%</p><p class="text-sm text-gray-600">Accuracy</p></div>
+                        <div class="text-center">
+                            <p class="text-2xl font-bold text-purple-600">50%</p>
+                            <p class="text-sm text-gray-600">Faster resolution</p>
+                        </div>
+                        <div class="text-center">
+                            <p class="text-2xl font-bold text-purple-600">+20</p>
+                            <p class="text-sm text-gray-600">NPS uplift</p>
+                        </div>
                     </div>
                 </div>
 
                 <div class="bg-gradient-to-br from-indigo-50 to-blue-50 rounded-3xl p-8 border-2 border-gray-100">
-                    <h3 class="text-2xl font-bold mb-2">Government</h3>
-                    <p class="text-sm text-gray-600 mb-4">Public Sector Document Management</p>
-                    <p class="text-gray-700 mb-6">Modernize government operations with secure, compliant AI solutions for document processing.</p>
+                    <h3 class="text-2xl font-bold mb-2">Leadership &amp; Strategy</h3>
+                    <p class="text-sm text-gray-600 mb-4">Company cockpit &amp; decision support</p>
+                    <p class="text-gray-700 mb-6">
+                        Replace static decks with a live command center: KPIs, OKRs, risks and opportunities
+                        with AI-generated summaries and drill-downs across the entire organization.
+                    </p>
                     <div class="flex gap-4">
-                        <div class="text-center"><p class="text-2xl font-bold text-indigo-600">100%</p><p class="text-sm text-gray-600">Compliance</p></div>
-                        <div class="text-center"><p class="text-2xl font-bold text-indigo-600">60%</p><p class="text-sm text-gray-600">Efficiency Gain</p></div>
+                        <div class="text-center">
+                            <p class="text-2xl font-bold text-indigo-600">1 view</p>
+                            <p class="text-sm text-gray-600">For the whole company</p>
+                        </div>
+                        <div class="text-center">
+                            <p class="text-2xl font-bold text-indigo-600">24/7</p>
+                            <p class="text-sm text-gray-600">Executive insight</p>
+                        </div>
                     </div>
                 </div>
 
             </div>
 
             <div class="mt-16 bg-gradient-to-r from-blue-600 to-indigo-600 rounded-3xl p-12 text-white text-center">
-                <h3 class="text-3xl font-bold mb-6">Why Choose Veritas.ai?</h3>
+                <h3 class="text-3xl font-bold mb-6">Why OnedeskAI?</h3>
                 <div class="grid md:grid-cols-3 gap-8">
                     <div>
-                        <h4 class="text-xl font-bold mb-2">Explainability</h4>
-                        <p class="text-blue-100">Full transparency in AI decisions for audit and compliance</p>
+                        <h4 class="text-xl font-bold mb-2">One OS, Many Teams</h4>
+                        <p class="text-blue-100">
+                            HR, Finance, Ops, Support and Leadership finally share the same AI-native foundation.
+                        </p>
                     </div>
                     <div>
-                        <h4 class="text-xl font-bold mb-2">Compliance Ready</h4>
-                        <p class="text-blue-100">Built-in compliance for HIPAA, GDPR, and industry standards</p>
+                        <h4 class="text-xl font-bold mb-2">Explainable &amp; Governed</h4>
+                        <p class="text-blue-100">
+                            Every AI action is traceable, auditable and controllable with human approvals.
+                        </p>
                     </div>
                     <div>
-                        <h4 class="text-xl font-bold mb-2">Enterprise Scale</h4>
-                        <p class="text-blue-100">Scalable infrastructure for organizations of any size</p>
+                        <h4 class="text-xl font-bold mb-2">Designed to Customize</h4>
+                        <p class="text-blue-100">
+                            Start with templates, then shape Onedesk OS around how your company truly works.
+                        </p>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Team -->
-    <section id="team" class="py-20 px-4 bg-white">
-        <div class="max-w-7xl mx-auto">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl lg:text-5xl font-bold mb-4">
-                    Led by Industry <span class="text-gradient">Pioneers</span>
-                </h2>
-                <p class="text-xl text-gray-600">Our founding team brings decades of combined experience in AI and healthcare</p>
-            </div>
-            <div class="grid md:grid-cols-2 gap-12 mb-16">
-                
-                <div class="bg-white rounded-3xl p-8 border-2 border-gray-100 hover:shadow-2xl transition-all">
-                    <div class="flex items-start space-x-6 mb-6">
-                        <div class="w-24 h-24 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center text-white text-3xl font-bold">SP</div>
-                        <div>
-                            <h3 class="text-2xl font-bold mb-1">Dr. Sireesha Perepu</h3>
-                            <p class="text-blue-600 font-semibold mb-1">Co-Founder & Chief AI Officer</p>
-                            <p class="text-sm text-gray-600">PhD</p>
-                        </div>
-                    </div>
-                    <p class="text-gray-600 mb-6">Leading AI and Digital Health expert with deep expertise in machine learning, governance, and healthcare innovation. Proven track record in deploying AI solutions at scale.</p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="px-3 py-1.5 bg-blue-50 text-blue-700 rounded-full text-sm">AI & ML</span>
-                        <span class="px-3 py-1.5 bg-blue-50 text-blue-700 rounded-full text-sm">Digital Health</span>
-                        <span class="px-3 py-1.5 bg-blue-50 text-blue-700 rounded-full text-sm">AI Governance</span>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-3xl p-8 border-2 border-gray-100 hover:shadow-2xl transition-all">
-                    <div class="flex items-start space-x-6 mb-6">
-                        <div class="w-24 h-24 bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-2xl flex items-center justify-center text-white text-3xl font-bold">UK</div>
-                        <div>
-                            <h3 class="text-2xl font-bold mb-1">Uday Kumar Karipe</h3>
-                            <p class="text-indigo-600 font-semibold mb-1">Co-Founder & Chief Technology Officer</p>
-                            <p class="text-sm text-gray-600">Tech Entrepreneur</p>
-                        </div>
-                    </div>
-                    <p class="text-gray-600 mb-6">Seasoned technology entrepreneur with extensive expertise in building and scaling enterprise systems. Strong background in technical innovation and business development.</p>
-                    <div class="flex flex-wrap gap-2">
-                        <span class="px-3 py-1.5 bg-indigo-50 text-indigo-700 rounded-full text-sm">Enterprise Systems</span>
-                        <span class="px-3 py-1.5 bg-indigo-50 text-indigo-700 rounded-full text-sm">Technology Leadership</span>
-                        <span class="px-3 py-1.5 bg-indigo-50 text-indigo-700 rounded-full text-sm">Architecture</span>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 rounded-3xl p-12 text-center">
-                <h3 class="text-3xl font-bold mb-4">Proven Track Record</h3>
-                <p class="text-lg text-gray-600 mb-8">Our founders have successfully deployed AI at Access Healthcare, AbbVie, Cisco, Ernst & Young @ Google</p>
-                <p class="text-gray-700 mb-4">Recognized by: <strong>ISACA, Visionaries, Put Data First, Techno Exponent</strong></p>
             </div>
         </div>
     </section>
@@ -276,21 +515,24 @@
         <div class="max-w-4xl mx-auto">
             <div class="text-center mb-16">
                 <h2 class="text-4xl lg:text-5xl font-bold mb-4">
-                    Let's Build Something <span class="text-gradient">Amazing Together</span>
+                    Let&apos;s Design Your <span class="text-gradient">Onedesk</span>
                 </h2>
-                <p class="text-xl text-gray-600">Ready to transform your business with trusted AI? Get in touch today.</p>
+                <p class="text-xl text-gray-600">
+                    Tell us how your company works today, and we&apos;ll show you what it looks like
+                    when everything runs through Onedesk OS.
+                </p>
             </div>
 
             <div class="bg-white rounded-3xl p-8 border-2 border-gray-100 shadow-xl">
-                <form class="space-y-6" method="POST" id="contact-form">
+                <form class="space-y-6">
                     <div class="grid md:grid-cols-2 gap-6">
                         <div>
                             <label class="block text-sm font-semibold text-gray-700 mb-2">Full Name *</label>
                             <input type="text" required class="w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:border-blue-600 focus:outline-none" placeholder="John Doe">
                         </div>
                         <div>
-                            <label class="block text-sm font-semibold text-gray-700 mb-2">Email Address *</label>
-                            <input type="email" required class="w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:border-blue-600 focus:outline-none" placeholder="john@company.com" name="company">
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">Work Email *</label>
+                            <input type="email" required class="w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:border-blue-600 focus:outline-none" placeholder="john@company.com">
                         </div>
                     </div>
                     <div class="grid md:grid-cols-2 gap-6">
@@ -299,32 +541,28 @@
                             <input type="text" class="w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:border-blue-600 focus:outline-none" placeholder="Your Company">
                         </div>
                         <div>
-                            <label class="block text-sm font-semibold text-gray-700 mb-2">Phone Number</label>
-                            <input type="tel" class="w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:border-blue-600 focus:outline-none" placeholder="+1 (555) 123-4567" name="phone">
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">Role / Team</label>
+                            <input type="text" class="w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:border-blue-600 focus:outline-none" placeholder="eg. Head of Ops, HR Lead">
                         </div>
                     </div>
                     <div>
-                        <label class="block text-sm font-semibold text-gray-700 mb-2">Area of Interest *</label>
+                        <label class="block text-sm font-semibold text-gray-700 mb-2">Which areas are you most interested in? *</label>
                         <select required class="w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:border-blue-600 focus:outline-none">
                             <option value="">Select an option</option>
-                            <option>Healthcare Solutions</option>
-                            <option>Finance Solutions</option>
-                            <option>Legal Solutions</option>
-                            <option>Government Solutions</option>
-                            <option>Custom AI Development</option>
-                            <option>Partnership Opportunities</option>
+                            <option>HR &amp; People OS</option>
+                            <option>Finance &amp; Revenue OS</option>
+                            <option>Support &amp; Operations OS</option>
+                            <option>Leadership Command Center</option>
+                            <option>Company-wide rollout</option>
                         </select>
                     </div>
                     <div>
-                        <label class="block text-sm font-semibold text-gray-700 mb-2">Message *</label>
-                        <textarea required rows="6" class="w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:border-blue-600 focus:outline-none resize-none" placeholder="Tell us about your project or inquiry..."></textarea>
+                        <label class="block text-sm font-semibold text-gray-700 mb-2">Tell us about your current tools &amp; pain points *</label>
+                        <textarea required rows="6" class="w-full px-4 py-3 rounded-lg border-2 border-gray-200 focus:border-blue-600 focus:outline-none resize-none" placeholder="Which tools do you use today? What&apos;s not working? What would your dream setup look like?"></textarea>
                     </div>
-                    
-  <input type="text" name="website" style="display:none" tabindex="-1" autocomplete="off">
-<button type="submit" class="w-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-4 rounded-lg font-semibold hover:shadow-xl hover:scale-105 transition-all">
-                        Send Message
+                    <button type="submit" class="w-full bg-gradient-to-r from-blue-600 to-indigo-600 text-white px-8 py-4 rounded-lg font-semibold hover:shadow-xl hover:scale-105 transition-all">
+                        Request a Demo of Onedesk OS
                     </button>
-  <p id="form-status" style="margin-top:8px;"></p>
                 </form>
             </div>
         </div>
@@ -337,86 +575,46 @@
                 <div class="md:col-span-2">
                     <div class="flex items-center space-x-2 mb-4">
                         <div class="bg-gradient-to-br from-blue-600 to-indigo-600 p-2 rounded-lg">
-                            <span class="text-white font-bold text-xl">V</span>
+                            <span class="text-white font-bold text-xl">O</span>
                         </div>
-                        <span class="text-2xl font-bold text-white">Veritas.ai</span>
+                        <span class="text-2xl font-bold text-white">OnedeskAI</span>
                     </div>
-                    <p class="text-gray-400 mb-6">Building trustworthy AI solutions that transform document-heavy data into accurate, actionable intelligence for high-stakes industries.</p>
+                    <p class="text-gray-400 mb-6">
+                        OnedeskAI is the operating system for intelligent work &mdash;
+                        bringing every team onto one AI-native foundation of apps,
+                        dashboards and agents.
+                    </p>
                 </div>
                 <div>
                     <h3 class="text-white font-bold text-lg mb-4">Quick Links</h3>
                     <ul class="space-y-2">
+                        <li><a href="#os" class="hover:text-white">Onedesk OS</a></li>
                         <li><a href="#services" class="hover:text-white">Services</a></li>
                         <li><a href="#solutions" class="hover:text-white">Solutions</a></li>
-                        <li><a href="#team" class="hover:text-white">Team</a></li>
                         <li><a href="#contact" class="hover:text-white">Contact</a></li>
                     </ul>
                 </div>
                 <div>
                     <h3 class="text-white font-bold text-lg mb-4">Contact</h3>
                     <ul class="space-y-2 text-sm">
-                        <li>📧 contact@veritas.ai</li>
+                        <li>📧 hello@onedesk.ai</li>
                         <li>📞 +1 (555) 123-4567</li>
-                        <li>📍 San Francisco, CA</li>
+                        <li>📍 Remote-first, global team</li>
                     </ul>
                 </div>
             </div>
             <div class="pt-8 border-t border-gray-800 text-center">
-                <p class="text-sm">© 2025 Veritas.ai. All rights reserved. | HIPAA Compliant | GDPR Ready | SOC 2 Certified</p>
+                <p class="text-sm">
+                    © 2025 OnedeskAI. All rights reserved.
+                </p>
             </div>
         </div>
     </footer>
 
     <script>
-        // Mobile menu toggle
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        
-        mobileMenuButton.addEventListener('click', () => {
-            mobileMenu.classList.toggle('hidden');
-        });
-
-        // Close mobile menu when clicking a link
-        document.querySelectorAll('#mobile-menu a').forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('hidden');
-            });
-        });
+        // Placeholder for future JS enhancements
+        // Mobile menu toggle could go here if you add a mobile nav button
     </script>
-
-
-<script>
-  // Replace with your Google Apps Script Web App URL
-  const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxkbQ0LACwD9ZK1Cu_teBFG_kNnR4Xq-OxaTJfxA1sDVu0OznLQeGgdBujqosLABtWL/exec";
-
-  document.getElementById('contact-form')?.addEventListener('submit', async (e) => {
-    e.preventDefault();
-    const form = e.currentTarget;
-    const statusEl = document.getElementById('form-status') || document.createElement('p');
-    statusEl.id = 'form-status';
-    if (!statusEl.parentNode) form.appendChild(statusEl);
-
-    // Honeypot bot check
-    if (form.website && form.website.value) {
-      statusEl.textContent = "Submission blocked.";
-      return;
-    }
-
-    try {
-      const fd = new FormData(form);
-      const res = await fetch(SCRIPT_URL, { method: 'POST', body: fd });
-      const data = await res.json().catch(() => ({}));
-      if (res.ok && data.ok) {
-        statusEl.textContent = "Thanks! Your response was submitted.";
-        form.reset();
-      } else {
-        statusEl.textContent = "Sorry, something went wrong. Please try again.";
-      }
-    } catch (err) {
-      statusEl.textContent = "Network error. Please try again.";
-    }
-  });
-</script>
 
 </body>
 </html>
